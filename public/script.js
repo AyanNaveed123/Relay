@@ -1,3 +1,5 @@
+alert('Welcome to the chat! Please enter your username and start chatting.');
+
 const username = document.getElementById("username");
 
 const socket = io();
@@ -46,15 +48,12 @@ socket.on("username accepted", () => {
   p.textContent = `Your username was accepted`;
   socket.username = username.value;
   console.log("username accepted!");
-
   socket.emit("chat message", {
     username: username.value,
     message: message,
   });
-
+  username.classList.add("username-fall");
   username.disabled = true;
-
-  input.value = "";
 });
 
 button.addEventListener("click", () => {
@@ -66,7 +65,13 @@ button.addEventListener("click", () => {
 
   if (!socket.username) {
     socket.emit("User Joined!", username.value);
+  } else {
+    socket.emit("chat message", {
+      username: username.value,
+      message: message,
+    });
   }
+  input.value = "";
 });
 
 input.addEventListener("keydown", (event) => {
