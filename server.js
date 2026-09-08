@@ -8,7 +8,7 @@ import { MongoClient } from "mongodb";
 dotenv.config();
 
 const app = express();
-const client = new MongoClient(process.env.MONGO_URI);
+const client = new MongoClient(process.env.MONGO_URI, { tls: true, minVersion: 'TLSv1.2' });
 client.connect().then(() => {
   console.log("Connected to MongoDB");
 }).catch((error) => {
