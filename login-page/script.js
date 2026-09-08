@@ -20,7 +20,7 @@ loginBtn.addEventListener("click", () => {
 loginForm.addEventListener("submit", (event) => {
   event.preventDefault();
   
-  fetch("/", {
+  fetch("/login", {
     method: "POST",
     headers: {
       "content-Type": "application/json",

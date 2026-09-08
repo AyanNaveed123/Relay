@@ -11,6 +11,8 @@ const app = express();
 const client = new MongoClient(process.env.MONGO_URI);
 client.connect().then(() => {
   console.log("Connected to MongoDB");
+}).catch((error) => {
+  console.error("Error connecting to MongoDB:", error);
 });
 const db = client.db("Relay");
 const users = db.collection("users");
