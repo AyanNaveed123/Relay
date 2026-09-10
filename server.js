@@ -16,7 +16,7 @@ client
 const db = client.db("Relay");
 const users = db.collection("users");
 app.use("/", express.static("login-page"));
-app.use("/app", express.static("public"));  
+app.use("/app", express.static("public"));
 app.use(express.json());
 const server = http.createServer(app);
 const io = new Server(server);
@@ -40,16 +40,24 @@ app.post("/login", (req, res) => {
     }
   });
 });
-
 io.on("connection", (socket) => {
   console.log("A user connected.");
+  socket.emit("online users", usernames);
+
+  socket.on("disconnect", () => {
+    console.log("A user disconnected.");
+    usernames.splice(usernames.indexOf(socket.username), 1);
+    io.emit("User Left!", socket.username);
+  });
 
   socket.on("User Joined!", (name) => {
     if (usernames.includes(name)) {
       socket.emit("Username taken", "That Username is already taken!");
       return;
     }
+    socket.username = name;
     usernames.push(name);
+    io.emit("online users", usernames);
     socket.emit("username accepted");
 
     io.emit("User Joined!", name);
