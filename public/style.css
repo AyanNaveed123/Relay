@@ -6,42 +6,120 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: #111;
+  background: radial-gradient(circle, #1b1b2b, #080808);
   font-family: Arial, sans-serif;
 }
-.message {
+#username:focus,
+#input:focus {
+  border-color: #8a7cff;
+  box-shadow: 0 0 8px rgba(138, 124, 255, 0.35);
+}
+#myButton {
+  background: #8a7cff;
+  color: white;
+}
+#h2 {
+  align-self: center;
+  color: #8a7cff;
+  text-shadow: 0 0 10px #8a7cff;
+}
+.sidebar h2 {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #444;
+}
+.online-users li {
+  list-style: none;
+  color: white;
+  padding: 10px 15px;
+  margin: 8px 0;
   background-color: #333;
+  border-radius: 8px;
+  width: 200px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+.online-users li::after {
+  content: "🟢";
+  position: absolute;
+  right: -25px;
+  text-shadow: 0 0 8px lime;
+}
+.online-users li:hover {
+  transform: translateX(5px);
+}
+.sidebar {
+  background: #222;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 100vh;
+  transform: translateX(-100%);
+  transition: transform 0.4s ease;
+  box-shadow: 0 0 20px rgba(138, 124, 255, 0.25);
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  min-height: 100vh;
+  border-radius: 12px;
+  z-index: 1;
+}
+.sidebar.open {
+  transform: translateX(0);
+}
+.menu-btn {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: #333;
+  border: 2px solid black;
+  border-radius: 6px;
+  width: 35px;
+  height: 30px;
+}
+.menu-btn:active {
+  background: #242424;
+}
+.message {
+  background-color: #292929;
   padding: 10px 14px;
-  border-radius: 10px;
+  border-radius: 14px;
   margin-bottom: 8px;
   width: fit-content;
   max-width: 80%;
   overflow-wrap: break-word;
 }
-#p1{
+.message small {
+  opacity: 0.6;
+  margin-left: 5px;
+}
+.message strong {
+  color: #8a7cff;
+}
+#p1 {
   color: #fff;
   font-weight: bold;
   text-align: center;
 }
-@keyframes usernameFall{
-  from{
+@keyframes usernameFall {
+  from {
     transform: rotate(0) translateY(0);
     opacity: 1;
   }
-  to{
+  to {
     transform: rotate(30deg) translateY(100px);
     opacity: 0;
   }
 }
-.username-fall{
-  animation: usernameFall .6s ease forwards;
+.username-fall {
+  animation: usernameFall 0.6s ease forwards;
 }
-#username:disabled{
+#username:disabled {
   background: #111;
   color: white;
   opacity: 1;
 }
-p{
+p {
   color: white;
 }
 .joined-message {
@@ -50,6 +128,7 @@ p{
 }
 .my-message {
   margin-left: auto;
+  background-color: #4a3f8f;
 }
 .chat {
   width: 400px;
@@ -60,6 +139,34 @@ p{
   padding: 20px;
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+.chat::before {
+  border-radius: 18px;
+  content: "";
+  background: conic-gradient(from var(--angle), blue, lightblue, red, blue);
+  width: 100%;
+  height: 100%;
+  filter: blur(15px);
+  top: -1%;
+  left: -1%;
+  z-index: -1;
+  padding: 5px;
+  position: absolute;
+  animation: spin 8s infinite linear;
+}
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
 }
 h1 {
   color: white;
@@ -102,7 +209,9 @@ h1 {
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(138, 124, 255, 0.5);
 }
 #myButton:hover {
   transform: scale(1.05);
+  background: #6f63d9;
 }
