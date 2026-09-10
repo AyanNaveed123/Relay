@@ -9,29 +9,30 @@ dotenv.config();
 
 const app = express();
 const client = new MongoClient(process.env.MONGO_URI, { tls: true });
-client.connect().then(() => {
-  console.log("Connected to MongoDB");
-}).catch((error) => {
-  console.error("Error connecting to MongoDB:", error);
-});
+client
+  .connect()
+  .then(() => console.log("Connected to MongoDB"))
+  .catch((error) => console.error("Error connecting to MongoDB:", error));
 const db = client.db("Relay");
 const users = db.collection("users");
 app.use("/", express.static("login-page"));
-app.use("/app", express.static("public"));
+app.use("/app", express.static("public"));  
 app.use(express.json());
 const server = http.createServer(app);
 const io = new Server(server);
 const usernames = [];
 
-app.post('/login', (req, res) => {
+app.post("/login", (req, res) => {
   const { email, password } = req.body;
 
   users.findOne({ email }).then((user) => {
     if (!user) {
       res.json({ success: false, message: "User not found" });
       return;
-    }  
-    const passwordHash = crypto.scryptSync(password, user.salt, 64).toString("hex");
+    }
+    const passwordHash = crypto
+      .scryptSync(password, user.salt, 64)
+      .toString("hex");
     if (passwordHash === user.passwordHash) {
       res.json({ success: true, message: "Login successful" });
     } else {
