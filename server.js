@@ -8,6 +8,8 @@ import { MongoClient } from "mongodb";
 dotenv.config();
 
 const app = express();
+console.log("Port: ", process.env.PORT);
+console.log("Mongo URI: ", !!process.env.MONGO_URI);
 const client = new MongoClient(process.env.MONGO_URI, { tls: true });
 client
   .connect()
