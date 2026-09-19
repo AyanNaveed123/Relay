@@ -45,6 +45,18 @@ socket.on("User Joined!", (name) => {
 });
 
 socket.on("User Left!", (name) => {
+  onlineUsers.querySelectorAll("li").forEach((li) => {
+    if (li.textContent === name) {
+      li.classList.add("fade-out");
+      li.addEventListener("animationend", () => {
+        li.remove();
+
+        onlineUsers
+          .querySelectorAll("li")
+          .forEach((li) => li.classList.add("slide-up"));
+      });
+    }
+  });
   p.classList.add("left-message");
   p.textContent = `${name} has left.`;
   messages.appendChild(p);

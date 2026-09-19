@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: radial-gradient(circle, #1b1b2b, #080808);
+  font-family: Arial, sans-serif;
+}
+
+.input-area {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.user-message {
+  color: white;
+  background: #4a3f8f;
+  padding: 10px 14px;
+  border-radius: 14px;
+  margin: 5px 0;
+  width: fit-content;
+  max-width: 80%;
+  margin-left: auto;
+}
+
+.ai-message {
+  color: white;
+  background: #292929;
+  padding: 10px 14px;
+  border-radius: 14px;
+  margin: 5px 0;
+  width: fit-content;
+  max-width: 80%;
+}
+
+#messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#p1 {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.chat {
+  width: 400px;
+  height: 600px;
+  background: #1b1b1b;
+  border: 1px solid #333;
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#p1 {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+#input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #444;
+  border-radius: 8px;
+  background: #111;
+  color: white;
+  outline: none;
+}
+
+#input:focus {
+  border-color: #8a7cff;
+  box-shadow: 0 0 8px rgba(138, 124, 255, 0.35);
+}
+
+#ask {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  background: #8a7cff;
+  color: white;
+  box-shadow: 0 0 10px rgba(138, 124, 255, 0.5);
+}
+
+#ask:hover {
+  transform: scale(1.05);
+  background: #6f63d9;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.chat::before {
+  border-radius: 18px;
+  content: "";
+  background: conic-gradient(from var(--angle), blue, lightblue, red, blue);
+  width: 100%;
+  height: 100%;
+  filter: blur(15px);
+  top: -1%;
+  left: -1%;
+  z-index: -1;
+  padding: 5px;
+  position: absolute;
+  animation: spin 8s infinite linear;
+}
+
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+
+  to {
+    --angle: 360deg;
+  }
+}

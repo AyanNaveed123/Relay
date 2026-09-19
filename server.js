@@ -17,10 +17,18 @@ const db = client.db("Relay");
 const users = db.collection("users");
 app.use("/", express.static("login-page"));
 app.use("/app", express.static("public"));
+app.use('/ai', express.static('ai'));
 app.use(express.json());
 const server = http.createServer(app);
 const io = new Server(server);
 const usernames = [];
+
+app.get('/search', async (req, res) => {
+  const query = req.query.q;
+  const response = await fetch(`https://searx.be/search?q=${encodeURIComponent(query)}&format=json`);
+  const data = await response.json();
+  res.json(data);
+});
 
 app.post("/login", (req, res) => {
   const { email, password } = req.body;
@@ -46,8 +54,10 @@ io.on("connection", (socket) => {
 
   socket.on("disconnect", () => {
     console.log("A user disconnected.");
-    usernames.splice(usernames.indexOf(socket.username), 1);
-    io.emit("User Left!", socket.username);
+    if (usernames.includes(socket.username)) {
+      usernames.splice(usernames.indexOf(socket.username), 1);
+      io.emit("User Left!", socket.username);
+    }
   });
 
   socket.on("User Joined!", (name) => {
