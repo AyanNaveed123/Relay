@@ -6,6 +6,7 @@ import dotenv from "dotenv";
 import { MongoClient } from "mongodb";
 
 dotenv.config();
+console.log("SERVER.JS STARTED");
 
 const app = express();
 console.log("Port: ", process.env.PORT);
