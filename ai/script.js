@@ -1,4 +1,5 @@
 const responses = {
+
   // Greetings
   hello: "Hello there! How can I help you today?",
   hey: "Hey there! How can I help you today?",
@@ -11,283 +12,320 @@ const responses = {
   // About Relay
   "what is relay?":
     "Relay is a real-time chat app designed to help you stay connected with friends and family.",
-
   "what is relay":
     "Relay is a real-time chat app designed to help you stay connected with friends and family.",
-
   "tell me about relay":
     "Relay is a real-time chat application focused on simple, fast communication between connected users.",
-
   "what does relay do?":
     "Relay lets users create accounts, log in, choose usernames, and communicate through real-time chat.",
-
   "what is the purpose of relay?":
     "Relay's purpose is to provide a simple way for people to communicate with each other in real-time.",
-
   "why is it called relay?":
     "The name Relay represents passing messages from one person to another, just like a relay passes something along.",
-
   "who made relay?":
     "Relay was created as a personal coding project.",
-
   "who created relay?":
     "Relay was created as a personal coding project.",
-
   "who is the developer?":
     "Relay was developed as a personal coding project.",
-
   "when was relay made?":
     "Relay is an evolving project, so its features and development continue to change over time.",
 
   // Getting started
   "how do i use it?":
     "To use Relay, create an account, log in, choose a username, and start chatting in real-time.",
-
   "how do i use relay?":
     "Create an account, log in, choose a username, and then you can start chatting.",
-
   "how do i get started?":
     "Create a Relay account and log in. After that, choose a username and start chatting.",
-
   "how do i start?":
     "Create an account, log in, choose a username, and send your first message.",
-
   "how do i join?":
     "Log in to Relay, choose an available username, and you'll be able to join the chat.",
-
   "how do i create an account?":
     "Use the registration page to enter your name, email, and password, then create your Relay account.",
-
   "how do i register?":
     "Go to the registration page and enter the required information to create your Relay account.",
-
   "how do i log in?":
     "Enter your registered email and password on the login page.",
-
   "i can't log in":
     "Make sure you're using the email and password associated with your Relay account.",
-
   "i forgot my password":
     "Password recovery isn't currently implemented in Relay.",
 
   // Features
   "what are the features of relay?":
     "Relay currently includes real-time chat, online user tracking, a chatbot, account registration, and login.",
-
   "what features does relay have?":
     "Relay includes real-time messaging, online user tracking, account registration, login, and its built-in AI chatbot.",
-
   "what can relay do?":
     "Relay can handle user accounts, authentication, real-time messaging, online-user tracking, and chatbot responses.",
-
   "does relay have chat?":
     "Yes! Real-time chat is one of Relay's main features.",
-
   "does relay have an ai?":
     "Yes! Relay includes a built-in chatbot designed to answer questions and help users.",
-
   "does relay have a chatbot?":
     "Yes. Relay has a built-in rule-based chatbot.",
-
   "does relay have accounts?":
     "Yes. Relay supports account registration and login.",
-
   "does relay have usernames?":
     "Yes. Users choose a username when joining the chat.",
-
   "does relay show online users?":
     "Yes. Relay can display users who are currently connected to the chat.",
 
   // Chat
   "what is real time chat?":
     "Real-time chat lets messages appear for connected users immediately instead of requiring the page to be refreshed.",
-
   "what does real time mean?":
     "Real-time means messages are delivered to connected users immediately without manually refreshing the page.",
-
   "how does the chat work?":
     "Relay uses real-time communication so connected users can send and receive messages instantly.",
-
   "can i chat with my friends?":
     "Yes! That's one of Relay's main purposes. You can chat with other connected users in real-time.",
-
   "can multiple people chat?":
     "Yes. Multiple connected users can participate in the same Relay chat.",
-
   "can i send messages?":
     "Yes! Choose a username and type your message into the chat input.",
-
   "do messages update automatically?":
     "Yes. Relay's real-time messaging system updates connected clients without requiring a page refresh.",
 
   // Online users
   "what are online users?":
     "Online users are people currently connected to the Relay chat.",
-
   "can i see who is online?":
     "Yes. Open the online-users menu to see the users currently connected.",
-
   "why did someone disappear from online users?":
     "They may have disconnected or left the Relay chat.",
-
   "what happens when someone leaves?":
     "Relay removes them from the online-user list and displays a message showing that they left.",
-
   "what happens when someone joins?":
     "Relay adds them to the online-user list and displays a join notification.",
 
   // Usernames
   "what is a username?":
     "A username is the name you use to identify yourself in the Relay chat.",
-
   "why do i need a username?":
     "Relay uses usernames to identify who sent each message.",
-
   "can i change my username?":
     "Currently, your username is locked after it has been accepted for the current chat session.",
-
   "can two people have the same username?":
     "No. Relay prevents two connected users from using the same username.",
-
   "what happens if my username is taken?":
     "Relay will tell you that the username is already taken, and you'll need to choose another one.",
 
   // Mobile
   "can i use relay on my phone?":
     "Relay is designed as a web app, so you can access it from a phone browser as long as the site is available.",
-
   "does relay work on mobile?":
     "Relay can be accessed through a mobile web browser.",
-
   "can i use relay on pc?":
     "Yes. Relay works as a web application on a computer.",
-
   "can i use relay on a laptop?":
     "Yes. You can use Relay through a web browser on a laptop.",
 
   // AI
   "what is the chatbot?":
     "The Relay chatbot is a small rule-based AI that matches questions with keywords and chooses the most relevant response.",
-
   "how does the chatbot work?":
     "I look for keywords in your question, give possible answers scores based on matching words, and choose the answer with the highest score.",
-
   "are you ai?":
     "I'm Relay's built-in chatbot. Right now, I'm a rule-based AI rather than a large language model.",
-
   "are you a bot?":
     "Yes, I'm a chatbot built into Relay.",
-
   "are you real?":
     "I'm real software, but I'm not a human. I'm a rule-based chatbot.",
-
   "are you human?":
     "No, I'm not human. I'm a chatbot built for Relay.",
-
   "are you smart?":
     "I'm getting smarter! Right now, I use keywords and scoring to figure out what you're asking.",
-
   "do you learn?":
     "Not automatically. My responses are programmed by the developer.",
-
   "can you learn?":
     "I don't currently learn from conversations automatically, but my programming can be updated with new knowledge and responses.",
-
   "do you remember me?":
     "No. I don't currently have long-term memory between conversations.",
-
   "do you have feelings?":
     "No. I don't have feelings, but I can still respond to your questions.",
-
   "do you have a brain?":
     "Not literally! My responses come from JavaScript logic and programmed rules.",
-
   "what can you do?":
     "I can answer questions about Relay, explain its features, help users understand how it works, and perform simple calculations.",
-
   "do you have any limits?":
     "Yes. I'm a rule-based chatbot, so I can only answer questions I've been programmed to understand.",
-
   "are you only about relay?":
     "Yes. I'm designed primarily to answer questions about Relay and its features.",
 
   // Technology
   "what is relay made with?":
     "Relay is built using web technologies including HTML, CSS, JavaScript, Node.js, Express, Socket.IO, and MongoDB.",
-
   "what programming language is relay written in?":
     "Relay uses JavaScript for its main application logic, along with HTML and CSS for the frontend.",
-
   "what backend does relay use?":
     "Relay uses Node.js with Express for its backend.",
-
   "what database does relay use?":
     "Relay uses MongoDB to store user account information.",
-
   "what is socket io?":
     "Socket.IO is used by Relay to enable real-time communication between the server and connected clients.",
-
   "what is mongodb?":
     "MongoDB is the database system Relay uses to store information such as user accounts.",
-
   "what is node js?":
     "Node.js allows JavaScript to run outside the browser and is used by Relay for its server-side code.",
-
   "what is express?":
     "Express is a Node.js web framework used by Relay to handle routes, requests, and serving files.",
 
   // Security
   "is relay secure?":
     "Relay uses password hashing and other server-side logic, but its security can continue to improve as development progresses.",
-
   "are passwords stored?":
     "Relay stores password hashes rather than storing passwords directly.",
-
   "are passwords encrypted?":
     "Relay uses password hashing with a salt rather than storing passwords as plain text.",
-
   "is my password safe?":
     "Relay hashes passwords before storing them, but users should always use strong, unique passwords.",
 
   // Availability
   "is relay free?":
     "Relay is currently a personal project, so its availability and features may change as development continues.",
-
   "is relay public?":
     "Relay's availability depends on where the project is currently being hosted.",
-
   "does relay require an account?":
     "Yes. The current Relay setup uses account registration and login before entering the app.",
 
   // Help
   "can you help me?":
     "Of course! Ask me something about Relay and I'll try to help.",
-
   "can you help me with something?":
     "Sure! Ask me something about Relay and I'll try to help.",
-
   "what should i do?":
     "If you're new to Relay, start by creating an account and logging in.",
-
   "i need help":
     "Sure! Tell me what you're having trouble with in Relay.",
-
   "relay isn't working":
     "Try refreshing the page first. If the problem continues, check the browser console for errors or contact the developer.",
 
   // Personality
   "what is your name?":
     "My name is Relay. How can I help you today?",
-
   "who are you?":
     "I'm Relay's built-in chatbot. I can answer questions about Relay and its features.",
-
   "do you like relay?":
     "I might be a little biased... 😎",
-
   "do you like coding?":
     "I literally exist because of code, so I'd say we're pretty close. 😎",
+  "are you funny?":
+    "I try my best. My jokes have a questionable success rate though. 💀",
 
+  // Programming
+  "what is javascript?":
+    "JavaScript is a programming language commonly used to make websites interactive and dynamic.",
+  "what is html?":
+    "HTML is the markup language used to structure the content of a webpage.",
+  "what is css?":
+    "CSS is used to style webpages, including their colors, layout, spacing, fonts, and animations.",
+  "what is programming?":
+    "Programming is the process of writing instructions that tell a computer what to do.",
+  "what is a variable?":
+    "A variable is a named place where a program can store a value.",
+  "what is a function?":
+    "A function is a reusable block of code designed to perform a particular task.",
+  "what is an array?":
+    "An array is a data structure that stores multiple values in a single variable.",
+  "what is a loop?":
+    "A loop repeatedly executes a block of code while a condition is satisfied or for a specified number of times.",
+  "what is an if statement?":
+    "An if statement lets a program execute code only when a specified condition is true.",
+  "what is an object?":
+    "An object is a data structure that stores information using key-value pairs.",
+  "what is a string?":
+    "A string is a sequence of characters, usually used to represent text.",
+  "what is a boolean?":
+    "A boolean is a value that can be either true or false.",
+
+  // Web Development
+  "what is web development?":
+    "Web development is the process of building websites and web applications.",
+  "what is frontend?":
+    "Frontend development focuses on the part of a website that users see and interact with.",
+  "what is backend?":
+    "Backend development handles server-side logic, databases, authentication, APIs, and other operations behind a website.",
+  "what is a website?":
+    "A website is a collection of webpages and resources that can be accessed through the internet or a local server.",
+  "what is an api?":
+    "An API is a way for different pieces of software to communicate with each other.",
+  "what is a rest api?":
+    "A REST API is an API that commonly uses HTTP methods such as GET, POST, PUT, PATCH, and DELETE to work with resources.",
+  "what is json?":
+    "JSON is a lightweight text format commonly used to exchange structured data between applications.",
+  "what is http?":
+    "HTTP is the protocol commonly used for communication between web browsers and web servers.",
+  "what is a server?":
+    "A server is a computer or program that provides data or services to other computers or programs.",
+  "what is a client?":
+    "A client is a device or program that requests data or services from a server.",
+
+  // Node.js
+  "what is node?":
+    "Node.js is a runtime that allows JavaScript to run outside of a web browser.",
+  "what is nodejs?":
+    "Node.js is a runtime that allows JavaScript to run outside of a web browser.",
+  "why use node js?":
+    "Node.js lets you use JavaScript for server-side applications, APIs, real-time applications, and other backend tasks.",
+  "what is npm?":
+    "npm is the package manager commonly used with Node.js to install and manage JavaScript packages.",
+  "what is express js?":
+    "Express.js is a web framework for Node.js that makes it easier to create routes, APIs, and web servers.",
+  "what is middleware?":
+    "Middleware is code that runs between receiving a request and sending a response, often used for things like authentication, logging, or parsing data.",
+
+  // MongoDB
+  "what is a database?":
+    "A database is a system used to store, organize, and retrieve data.",
+  "what is mongodb?":
+    "MongoDB is a NoSQL database that stores data in flexible document-based structures.",
+  "what is a collection?":
+    "A collection in MongoDB is a group of documents, similar in purpose to a table in a relational database.",
+  "what is a document in mongodb?":
+    "A MongoDB document is a record stored in BSON format and represented similarly to a JavaScript object.",
+  "what is nosql?":
+    "NoSQL refers to database systems that don't rely on the traditional relational table structure used by SQL databases.",
+
+  // Git / GitHub
+  "what is git?":
+    "Git is a version control system used to track changes in code and collaborate on projects.",
+  "what is github?":
+    "GitHub is a platform where developers can store Git repositories, collaborate, and manage software projects.",
+  "what is a git repository?":
+    "A Git repository is a project directory tracked by Git so changes can be recorded and managed.",
+  "what is git commit?":
+    "A Git commit records a set of changes in your repository with a message describing what changed.",
+  "what is git push?":
+    "Git push uploads your local commits to a remote repository such as GitHub.",
+  "what is git pull?":
+    "Git pull downloads changes from a remote repository and integrates them into your local branch.",
+
+  // General
+  "what is software?":
+    "Software is a collection of programs and instructions that tell a computer how to perform tasks.",
+  "what is hardware?":
+    "Hardware refers to the physical components of a computer or electronic device.",
+  "what is an operating system?":
+    "An operating system is software that manages a computer's hardware and provides services for other programs.",
+  "what is windows?":
+    "Windows is an operating system developed by Microsoft.",
+  "what is linux?":
+    "Linux is a family of open-source operating systems based on the Linux kernel.",
+  "what is an algorithm?":
+    "An algorithm is a step-by-step procedure for solving a problem or completing a task.",
+  "what is debugging?":
+    "Debugging is the process of finding and fixing errors in a program.",
+  "what is an error in programming?":
+    "A programming error is a mistake in code that can cause incorrect behavior, crashes, or unexpected results.",
+
+  // Fun
+  "tell me a joke":
+    "Sure 😎 Check out my joke collection!",
+  "make me laugh":
+    "I would tell you a UDP joke... but you might not get it. 💀",
   "are you funny?":
     "I try my best. My jokes have a questionable success rate though. 💀",
 
@@ -301,7 +339,10 @@ const responses = {
   "good night": "Good night! See you on Relay. 🌙",
 };
 
+
 const keywords = {
+
+  // Relay
   relay: "what is relay?",
   app: "what is relay?",
   chat: "what is real time chat?",
@@ -310,6 +351,7 @@ const keywords = {
   purpose: "what is the purpose of relay?",
   called: "why is it called relay?",
 
+  // Getting started
   use: "how do i use it?",
   using: "how do i use it?",
   login: "how do i log in?",
@@ -322,10 +364,12 @@ const keywords = {
   password: "i forgot my password",
   forgot: "i forgot my password",
 
+  // Features
   features: "what are the features of relay?",
   feature: "what are the features of relay?",
   capabilities: "what can relay do?",
 
+  // Mobile
   phone: "can i use relay on my phone?",
   mobile: "does relay work on mobile?",
   browser: "can i use relay on my phone?",
@@ -333,31 +377,19 @@ const keywords = {
   computer: "can i use relay on pc?",
   laptop: "can i use relay on a laptop?",
 
+  // Starting
   get: "how do i get started?",
   started: "how do i get started?",
   start: "how do i get started?",
   account: "does relay require an account?",
 
-  information: "where can i find more information about relay?",
-  website: "where can i find more information about relay?",
-  documentation: "where can i find more information about relay?",
-
-  contact: "how can i contact you?",
-
-  name: "what is your name?",
-  who: "who are you?",
-
-  do: "what can you do?",
+  // AI
   tasks: "what can you do?",
-
   help: "can you help me?",
-
   limits: "do you have any limits?",
   limited: "do you have any limits?",
-
   bot: "are you a bot?",
   chatbot: "what is the chatbot?",
-
   real: "are you real?",
   human: "are you human?",
   smart: "are you smart?",
@@ -368,9 +400,9 @@ const keywords = {
   learning: "can you learn?",
   memory: "do you remember me?",
   remember: "do you remember me?",
-
   ai: "are you ai?",
 
+  // Chat
   messaging: "does relay have chat?",
   message: "can i send messages?",
   messages: "can i send messages?",
@@ -383,6 +415,7 @@ const keywords = {
   update: "do messages update automatically?",
   refresh: "do messages update automatically?",
 
+  // Online
   online: "can i see who is online?",
   connected: "what are online users?",
   disappear: "why did someone disappear from online users?",
@@ -392,29 +425,85 @@ const keywords = {
   joined: "what happens when someone joins?",
   joining: "what happens when someone joins?",
 
+  // Usernames
   change: "can i change my username?",
   duplicate: "can two people have the same username?",
   same: "can two people have the same username?",
   taken: "what happens if my username is taken?",
 
+  // Time
   realtime: "what is real time chat?",
   "real-time": "what is real time chat?",
 
+  // Technology
   technology: "what is relay made with?",
   tech: "what is relay made with?",
   programming: "what programming language is relay written in?",
   language: "what programming language is relay written in?",
-  javascript: "what programming language is relay written in?",
+  javascript: "what is javascript?",
+  html: "what is html?",
+  css: "what is css?",
   backend: "what backend does relay use?",
-  server: "what backend does relay use?",
-  database: "what database does relay use?",
-  mongodb: "what database does relay use?",
+  server: "what is a server?",
+  database: "what is a database?",
+  mongodb: "what is mongodb?",
   socket: "what is socket io?",
   socketio: "what is socket io?",
   node: "what is node js?",
-  nodejs: "what is node js?",
+  nodejs: "what is nodejs?",
   express: "what is express?",
+  expressjs: "what is express js?",
 
+  // Programming
+  variable: "what is a variable?",
+  function: "what is a function?",
+  array: "what is an array?",
+  arrays: "what is an array?",
+  loop: "what is a loop?",
+  loops: "what is a loop?",
+  "if": "what is an if statement?",
+  object: "what is an object?",
+  string: "what is a string?",
+  boolean: "what is a boolean?",
+  algorithm: "what is an algorithm?",
+  debugging: "what is debugging?",
+  error: "what is an error in programming?",
+
+  // Web
+  web: "what is web development?",
+  website: "what is a website?",
+  frontend: "what is frontend?",
+  api: "what is an api?",
+  rest: "what is a rest api?",
+  json: "what is json?",
+  http: "what is http?",
+  client: "what is a client?",
+  middleware: "what is middleware?",
+
+  // Node
+  npm: "what is npm?",
+
+  // MongoDB
+  collection: "what is a collection?",
+  document: "what is a document in mongodb?",
+  nosql: "what is nosql?",
+
+  // Git
+  git: "what is git?",
+  github: "what is github?",
+  repository: "what is a git repository?",
+  commit: "what is git commit?",
+  push: "what is git push?",
+  pull: "what is git pull?",
+
+  // General
+  software: "what is software?",
+  hardware: "what is hardware?",
+  operating: "what is an operating system?",
+  windows: "what is windows?",
+  linux: "what is linux?",
+
+  // Security
   secure: "is relay secure?",
   security: "is relay secure?",
   passwords: "are passwords stored?",
@@ -423,21 +512,27 @@ const keywords = {
   hashing: "are passwords encrypted?",
   hash: "are passwords stored?",
 
+  // Availability
   free: "is relay free?",
   public: "is relay public?",
   available: "is relay public?",
   require: "does relay require an account?",
   required: "does relay require an account?",
 
+  // Problems
   problem: "relay isn't working",
   issue: "relay isn't working",
-  error: "relay isn't working",
   working: "relay isn't working",
 
+  // Personality
   funny: "are you funny?",
   coding: "do you like coding?",
-  like: "do you like relay?",
 
+  // Fun
+  joke: "tell me a joke",
+  laugh: "make me laugh",
+
+  // Thanks / goodbye
   thanks: "thanks",
   thank: "thank you",
   bye: "bye",
@@ -446,7 +541,9 @@ const keywords = {
   night: "good night",
 };
 
+
 const weights = {
+
   relay: 1,
   app: 2,
   chat: 2,
@@ -483,22 +580,13 @@ const weights = {
   start: 2,
   account: 2,
 
-  information: 2,
-  website: 2,
-  documentation: 3,
-  contact: 3,
-
-  name: 3,
-  who: 1,
-  do: 1,
   tasks: 2,
   help: 2,
-
   limits: 3,
   limited: 3,
+
   bot: 3,
   chatbot: 3,
-
   real: 3,
   human: 3,
   smart: 3,
@@ -545,6 +633,8 @@ const weights = {
   programming: 3,
   language: 3,
   javascript: 3,
+  html: 3,
+  css: 3,
   backend: 3,
   server: 2,
   database: 3,
@@ -554,6 +644,50 @@ const weights = {
   node: 3,
   nodejs: 3,
   express: 3,
+  expressjs: 3,
+
+  variable: 3,
+  function: 3,
+  array: 3,
+  arrays: 3,
+  loop: 3,
+  loops: 3,
+  if: 3,
+  object: 3,
+  string: 3,
+  boolean: 3,
+  algorithm: 3,
+  debugging: 3,
+  error: 3,
+
+  web: 3,
+  website: 3,
+  frontend: 3,
+  api: 3,
+  rest: 3,
+  json: 3,
+  http: 3,
+  client: 3,
+  middleware: 3,
+
+  npm: 3,
+
+  collection: 3,
+  document: 3,
+  nosql: 3,
+
+  git: 3,
+  github: 3,
+  repository: 3,
+  commit: 3,
+  push: 3,
+  pull: 3,
+
+  software: 3,
+  hardware: 3,
+  operating: 3,
+  windows: 3,
+  linux: 3,
 
   secure: 3,
   security: 3,
@@ -571,12 +705,13 @@ const weights = {
 
   problem: 3,
   issue: 3,
-  error: 3,
   working: 3,
 
   funny: 3,
   coding: 2,
-  like: 2,
+
+  joke: 5,
+  laugh: 4,
 
   thanks: 2,
   thank: 2,
@@ -585,6 +720,7 @@ const weights = {
   see: 2,
   night: 2,
 };
+
 
 const jokes = [
   "Why did the programmer quit his job? He didn't get arrays. 💀",
@@ -599,11 +735,14 @@ const jokes = [
   "Why did the programmer break the internet? He forgot to close a bracket. 💀",
 ];
 
+
 const input = document.getElementById("input");
 const askBtn = document.getElementById("ask");
 const messages = document.getElementById("messages");
 
+
 askBtn.addEventListener("click", () => {
+
   const question = input.value.toLowerCase().trim();
 
   if (question === "") {
@@ -614,6 +753,7 @@ askBtn.addEventListener("click", () => {
   userMessage.classList.add("user-message");
   userMessage.innerHTML = `<strong>You:</strong> ${question}`;
   messages.appendChild(userMessage);
+
   const response = document.createElement("p");
   response.classList.add("ai-message");
   response.textContent = getResponse(question);
@@ -624,7 +764,9 @@ askBtn.addEventListener("click", () => {
   input.value = "";
 });
 
+
 const getResponse = (question) => {
+
   question = question.replaceAll("real time", "real-time");
 
   // Calculator
@@ -633,13 +775,15 @@ const getResponse = (question) => {
     !isNaN(question[0]) ||
     question.endsWith("calculate")
   ) {
+
     const expression = question.replace("calculate", "");
-    const parts = expression.split(/([+\-*/^])/);
+    const parts = expression.split(/([+\-\*\/^])/);
 
     const num1 = Number(parts[0]);
     const num2 = Number(parts[2]);
 
     switch (parts[1]) {
+
       case "+":
         return num1 + num2;
 
@@ -653,6 +797,7 @@ const getResponse = (question) => {
         return num1 / num2;
 
       case "^":
+
         let result = 1;
 
         for (let i = 0; i < num2; i++) {
@@ -666,51 +811,65 @@ const getResponse = (question) => {
     }
   }
 
+
   // Exact response
   if (responses[question]) {
     return responses[question];
   }
+
 
   // Exact keyword
   if (keywords[question]) {
     return responses[keywords[question]];
   }
 
+
   // Keyword scoring
   const score = {};
 
   for (const key in keywords) {
+
     if (question.split(" ").includes(key)) {
+
       const answer = keywords[key];
 
       score[answer] = (score[answer] || 0) + weights[key];
     }
   }
 
+
   let bestMatch = null;
   let bestScore = 0;
 
   for (const answer in score) {
+
     if (score[answer] > bestScore) {
+
       bestMatch = answer;
       bestScore = score[answer];
     }
   }
+
 
   // Jokes
   if (question.includes("joke")) {
     return jokes[Math.floor(Math.random() * jokes.length)];
   }
 
+
   if (bestMatch) {
     return responses[bestMatch];
   }
 
+
   return "Sorry, I don't have an answer for that question.";
 };
 
+
 input.addEventListener("keydown", (event) => {
+
   if (event.key === "Enter") {
     askBtn.click();
   }
+
 });
