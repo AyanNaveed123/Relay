@@ -1,0 +1,4 @@
+framework: node
+port: 3000
+install: npm install
+start: node server.js
