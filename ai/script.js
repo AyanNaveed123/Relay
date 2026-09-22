@@ -9,6 +9,311 @@ const responses = {
   "good evening": "Good evening! What can I help you with?",
   yo: "Yo! What's up? 😎",
 
+  "what is ai?":
+    "AI (Artificial Intelligence) is technology that allows computers to perform tasks that normally require human intelligence, such as understanding language, recognizing patterns, and solving problems.",
+
+  "what is artificial intelligence?":
+    "Artificial Intelligence is technology that enables computers to perform tasks that usually require human intelligence, such as learning, reasoning, and understanding language.",
+
+  "what is the internet?":
+    "The internet is a worldwide network of connected computers and devices that communicate with each other.",
+
+  "what is google?":
+    "Google is a technology company best known for its search engine, which helps people find information on the web.",
+
+  "what is a search engine?":
+    "A search engine is a service that helps you find information on the internet. Google, Bing, and DuckDuckGo are examples.",
+
+  "what is a browser?":
+    "A web browser is software used to access websites and web applications. Chrome, Firefox, Edge, and Safari are examples.",
+
+  "what is an app?":
+    "An app is a software program designed to perform specific tasks on a computer, phone, tablet, or other device.",
+
+  "what is software?":
+    "Software is a set of instructions that tells a computer what to do.",
+
+  "what is hardware?":
+    "Hardware refers to the physical components of a computer, such as the CPU, RAM, SSD, keyboard, and display.",
+
+  "what is an operating system?":
+    "An operating system is the main software that manages a computer's hardware and allows other programs to run. Windows, Linux, Android, and macOS are examples.",
+
+
+  "what is my ip?":
+    "Your IP address is a number that identifies your device or network on the internet. I can't see your IP address from this chat.",
+
+  "what is my ip address?":
+    "Your IP address identifies your device or network on the internet. I can't directly see your IP address.",
+
+  "what is a vpn?":
+    "A VPN creates an encrypted connection between your device and a VPN server. It can improve privacy on networks, although it does not make you completely anonymous.",
+
+  "what is wifi?":
+    "Wi-Fi is a wireless networking technology that allows devices to connect to a local network and access the internet.",
+
+  "what is bluetooth?":
+    "Bluetooth is a short-range wireless technology used to connect devices such as headphones, keyboards, mice, and phones.",
+
+  "what is cloud computing?":
+    "Cloud computing means using computing resources such as storage, servers, and databases over the internet instead of relying entirely on your own device.",
+
+  "what is cybersecurity?":
+    "Cybersecurity is the practice of protecting computers, networks, accounts, and data from unauthorized access and other digital threats.",
+
+  "what is a password?":
+    "A password is a secret string of characters used to verify your identity and protect an account.",
+
+  "how to create a strong password?":
+    "Use a long, unique password or passphrase for each account. A password manager can help you generate and store unique passwords.",
+
+  "what is two factor authentication?":
+    "Two-factor authentication, or 2FA, adds another verification step to your login, such as a code from an authenticator app.",
+
+
+  "how to screenshot on windows?":
+    "On Windows, you can press Win + Shift + S to select an area for a screenshot. You can also use the Print Screen key.",
+
+  "how to screenshot on mac?":
+    "On a Mac, press Command + Shift + 3 for the entire screen or Command + Shift + 4 to select an area.",
+
+  "how to copy and paste?":
+    "On Windows, use Ctrl + C to copy and Ctrl + V to paste. On Mac, use Command + C and Command + V.",
+
+  "how to undo?":
+    "Use Ctrl + Z on Windows or Command + Z on Mac to undo your most recent action.",
+
+  "how to redo?":
+    "Use Ctrl + Y on Windows in many applications, or Command + Shift + Z on Mac.",
+
+  "what is ctrl z?":
+    "Ctrl + Z is a keyboard shortcut commonly used to undo the previous action.",
+
+  "what is ram?":
+    "RAM is temporary computer memory used to hold data and programs that are currently being used.",
+
+  "what is cpu?":
+    "The CPU is the main processor of a computer. It executes instructions and performs calculations.",
+
+  "what is gpu?":
+    "A GPU is a processor specialized for graphics and highly parallel calculations. It is commonly used for games, video processing, and some AI workloads.",
+
+  "what is an ssd?":
+    "An SSD is a solid-state storage device. It stores data using flash memory and is generally much faster than a traditional hard disk drive.",
+
+
+  "what is programming?":
+    "Programming is the process of writing instructions that tell a computer how to perform tasks.",
+
+  "what is javascript?":
+    "JavaScript is a programming language widely used to make websites interactive. It can also run on servers using environments such as Node.js.",
+
+  "what is python?":
+    "Python is a general-purpose programming language known for its readable syntax and wide use in automation, web development, data science, and AI.",
+
+  "what is c++?":
+    "C++ is a general-purpose programming language commonly used for high-performance software, games, operating systems, and other applications.",
+
+  "what is html?":
+    "HTML is the markup language used to structure content on web pages.",
+
+  "what is css?":
+    "CSS is used to style HTML elements, controlling things such as colors, layouts, spacing, fonts, and animations.",
+
+  "what is a variable?":
+    "A variable is a named place used to store a value that a program can use and sometimes change.",
+
+  "what is a function?":
+    "A function is a reusable block of code designed to perform a particular task.",
+
+  "what is an array?":
+    "An array is a data structure that stores multiple values in an ordered collection.",
+
+  "what is a loop?":
+    "A loop repeatedly executes a block of code while a condition is satisfied or for a specified number of iterations.",
+
+  "what is an if statement?":
+    "An if statement allows a program to execute different code depending on whether a condition is true or false.",
+
+  "what is an object?":
+    "An object is a data structure that stores related information using properties and can also contain functions called methods.",
+
+  "what is a string?":
+    "A string is a sequence of characters used to represent text.",
+
+  "what is a boolean?":
+    "A Boolean is a data type with two possible values: true or false.",
+
+  "what is an algorithm?":
+    "An algorithm is a sequence of steps used to solve a problem or perform a task.",
+
+  "what is debugging?":
+    "Debugging is the process of finding and fixing problems in a program.",
+
+  "what is an error in programming?":
+    "A programming error is a problem in code that can cause incorrect behavior, crashes, or prevent the program from running.",
+
+
+  "what is web development?":
+    "Web development is the process of building and maintaining websites and web applications.",
+
+  "what is frontend?":
+    "Frontend development focuses on the parts of a website that users see and interact with, usually using HTML, CSS, and JavaScript.",
+
+  "what is backend?":
+    "Backend development handles server-side logic, databases, authentication, APIs, and other operations behind a website.",
+
+  "what is a website?":
+    "A website is a collection of web pages and resources that can be accessed through the internet.",
+
+  "what is an api?":
+    "An API is a way for different software programs to communicate with each other.",
+
+  "what is a rest api?":
+    "A REST API is an API style that commonly uses HTTP methods such as GET, POST, PUT, PATCH, and DELETE to work with resources.",
+
+  "what is json?":
+    "JSON is a lightweight text format commonly used to exchange structured data between applications.",
+
+  "what is http?":
+    "HTTP is a protocol used for communication between clients and web servers.",
+
+  "what is https?":
+    "HTTPS is the encrypted version of HTTP. It helps protect data exchanged between a browser and a website.",
+
+  "what is a server?":
+    "A server is a computer or software system that provides data or services to other computers called clients.",
+
+  "what is a client?":
+    "A client is a device or application that requests services or data from a server.",
+
+  "what is node?":
+    "Node.js is a JavaScript runtime that allows JavaScript to run outside a web browser.",
+
+  "what is nodejs?":
+    "Node.js is a JavaScript runtime commonly used to build servers, APIs, command-line tools, and other applications.",
+
+  "why use node js?":
+    "Node.js allows developers to use JavaScript on the server. Its event-driven architecture makes it useful for many network applications.",
+
+  "what is npm?":
+    "npm is the package manager commonly used with Node.js. It allows developers to install and manage JavaScript packages.",
+
+  "what is express js?":
+    "Express is a lightweight Node.js web framework used to build servers, APIs, routes, and web applications.",
+
+  "what is middleware?":
+    "Middleware is code that runs during the request-response process and can modify requests, responses, or perform other tasks.",
+
+
+  "what is a database?":
+    "A database is an organized system for storing and retrieving data.",
+
+  "what is mongodb?":
+    "MongoDB is a NoSQL database that stores data in flexible document-based structures similar to JSON.",
+
+  "what is a collection?":
+    "In MongoDB, a collection is a group of related documents. It is similar to a table in a relational database.",
+
+  "what is a document in mongodb?":
+    "A MongoDB document is a record stored as BSON and typically represented using a JSON-like structure.",
+
+  "what is nosql?":
+    "NoSQL refers to database systems that don't rely exclusively on the traditional relational table model. MongoDB is an example.",
+
+
+  "what is git?":
+    "Git is a version-control system used to track changes in code and collaborate on software projects.",
+
+  "what is github?":
+    "GitHub is a platform for hosting Git repositories and collaborating on software projects.",
+
+  "what is a git repository?":
+    "A Git repository is a project directory tracked by Git. It stores the project's files and their version history.",
+
+  "what is git commit?":
+    "A Git commit records a set of changes in your repository's history.",
+
+  "what is git push?":
+    "Git push uploads your local commits to a remote repository such as GitHub.",
+
+  "what is git pull?":
+    "Git pull downloads changes from a remote repository and integrates them into your local branch.",
+
+
+  "what is machine learning?":
+    "Machine learning is a branch of AI where computers learn patterns from data to make predictions or decisions.",
+
+  "what is an ai model?":
+    "An AI model is a computational system trained to recognize patterns and produce outputs such as predictions, classifications, or generated text.",
+
+  "what is chatgpt?":
+    "ChatGPT is an AI assistant developed by OpenAI that can understand and generate natural-language responses.",
+
+  "what is generative ai?":
+    "Generative AI refers to AI systems that can create new content such as text, images, audio, or code.",
+
+  "what is an llm?":
+    "LLM stands for Large Language Model. It is an AI model trained on large amounts of text to understand and generate language.",
+
+  "what is a chatbot?":
+    "A chatbot is software designed to communicate with users through text or voice.",
+
+  "how many days are in a year?":
+    "A normal year has 365 days. A leap year has 366 days.",
+
+  "how many weeks are in a year?":
+    "A normal year has 52 full weeks plus 1 day. A leap year has 52 full weeks plus 2 days.",
+
+  "how many seconds are in a day?":
+    "There are 86,400 seconds in a day.",
+
+  "how many minutes are in an hour?":
+    "There are 60 minutes in an hour.",
+
+  "how many seconds are in an hour?":
+    "There are 3,600 seconds in an hour.",
+
+  "how many hours are in a day?":
+    "There are 24 hours in a day.",
+
+  "how many grams are in a kilogram?":
+    "There are 1,000 grams in a kilogram.",
+
+  "how many centimeters are in a meter?":
+    "There are 100 centimeters in a meter.",
+
+  "how many meters are in a kilometer?":
+    "There are 1,000 meters in a kilometer.",
+
+
+  "what is instagram?":
+    "Instagram is a social media platform focused on sharing photos, videos, messages, and other content.",
+
+  "what is youtube?":
+    "YouTube is a video-sharing platform where users can watch, upload, and share videos.",
+
+  "what is tiktok?":
+    "TikTok is a social media platform centered around short-form videos.",
+
+  "how to delete instagram account?":
+    "You can delete an Instagram account through Instagram's account-management settings. Make sure you understand the difference between temporarily deactivating and permanently deleting it.",
+
+  "how to unsend a message on instagram?":
+    "Open the conversation, select the message, and choose the option to unsend it. The exact interface can change between app versions.",
+
+  "tell me a joke":
+    "Why did the programmer quit his job? Because he didn't get arrays. 😭",
+
+  "make me laugh":
+    "I told my computer I needed a break... now it won't stop sending me vacation ads. 💀",
+
+  "tell me something interesting":
+    "Octopuses have three hearts. Two pump blood toward the gills, while the third pumps it through the rest of the body.",
+
+  "what is the meaning of life?":
+    "That's a huge question 😭. Different people have different answers. Many find meaning through relationships, learning, creativity, faith, helping others, or pursuing meaningful goals.",
+
   // About Relay
   "what is relay?":
     "Relay is a real-time chat app designed to help you stay connected with friends and family.",
@@ -330,11 +635,11 @@ const responses = {
     "I try my best. My jokes have a questionable success rate though. 💀",
 
   // Thanks / goodbye
-  thanks: "You're welcome! 😎",
+  "thanks": "You're welcome! 😎",
   "thank you": "You're welcome! Happy to help.",
   "thanks relay": "You're welcome! Glad I could help. 😎",
   bye: "Goodbye! See you on Relay.",
-  goodbye: "Goodbye! See you later!",
+  "goodbye": "Goodbye! See you later!",
   "see you": "See you later! 👋",
   "good night": "Good night! See you on Relay. 🌙",
 };
@@ -734,6 +1039,31 @@ const jokes = [
   "Why did the programmer love coffee? Because it was his favorite debugging tool. ☕",
   "Why did the programmer break the internet? He forgot to close a bracket. 💀",
 ];
+
+const moveButton = document.getElementById('moveCircles');
+let moved = false;
+
+moveButton.addEventListener('click', () => {
+
+  if(!moved) {
+    document.body.style.setProperty('--x1', '30%');
+    document.body.style.setProperty('--y1', '30%');
+    document.body.style.setProperty('--x2', '70%');
+    document.body.style.setProperty('--y2', '70%');
+    document.body.style.setProperty('--x3', '30%');
+    document.body.style.setProperty('--y3', '70%');
+    moved = true;
+  } else {
+    document.body.style.setProperty('--x1', '70%');
+    document.body.style.setProperty('--y1', '70%');
+    document.body.style.setProperty('--x2', '30%');
+    document.body.style.setProperty('--y2', '30%');
+    document.body.style.setProperty('--x3', '70%');
+    document.body.style.setProperty('--y3', '30%');
+    moved = false;
+  }
+  console.log(getComputedStyle(document.body).getPropertyValue('--x1'));
+})
 
 
 const input = document.getElementById("input");

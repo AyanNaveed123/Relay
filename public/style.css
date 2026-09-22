@@ -1,12 +1,61 @@
 * {
   box-sizing: border-box;
 }
+@property --x1 {
+  syntax: "<percentage>";
+  initial-value: 20%;
+  inherits: false;
+}
+
+@property --y1 {
+  syntax: "<percentage>";
+  initial-value: 30%;
+  inherits: false;
+}
+
+@property --x2 {
+  syntax: "<percentage>";
+  initial-value: 80%;
+  inherits: false;
+}
+
+@property --y2 {
+  syntax: "<percentage>";
+  initial-value: 70%;
+  inherits: false;
+}
+
+@property --x3 {
+  syntax: "<percentage>";
+  initial-value: 50%;
+  inherits: false;
+}
+
+@property --y3 {
+  syntax: "<percentage>";
+  initial-value: 50%;
+  inherits: false;
+}
 body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background:
+  radial-gradient(circle at var(--x1) var(--y1), #6b5cff, transparent 30%),
+  radial-gradient(circle at var(--x2) var(--y2), #ff4fd8, transparent 30%),
+  radial-gradient(circle at var(--x3) var(--y3), #161625, #050505 75%);
+
+--x1: 20%;
+--y1: 30%;
+--x2: 80%;
+--y2: 70%;
+--x3: 50%;
+--y3: 50%;
+
+transition: --x1 1s ease, --y1 1s ease,
+            --x2 1s ease, --y2 1s ease,
+            --x3 1s ease, --y3 1s ease;
   min-height: 100vh;
-  background: radial-gradient(circle, #1b1b2b, #080808);
   font-family: Arial, sans-serif;
 }
 #username:focus,
@@ -62,7 +111,9 @@ body {
   transform: translateX(5px);
 }
 .sidebar {
-  background: #222;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, .5);
+  background: rgba(255, 255, 255, .25);
   position: fixed;
   left: 0;
   top: 0;
@@ -82,29 +133,95 @@ body {
   transform: translateX(0);
 }
 
+#moveCircles {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  background: rgba(255, 255, 255, .25);
+  border: 2px solid rgba(255, 255, 255, .5);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-radius: 6px;
+  width: 45px;
+  height: 30px;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+#moveCircles:active {
+  background: rgba(255, 255, 255, .75);
+}
+#moveCircles:hover{
+  transform: scale(1.10);
+}
+
+#typing{
+  height: 20px;
+  margin: 5px 10px;
+  font-size: 13px;
+  opacity: 0.7;
+  font-style: italic;
+}
+
 #ai {
   position: absolute;
   top: 15px;
   right: 15px;
-  background: #333;
-  border: 2px solid black;
+  background: rgba(255, 255, 255, .25);
+  border: 2px solid rgba(255, 255, 255, .5);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   border-radius: 6px;
   width: 35px;
   height: 30px;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+#ai:active {
+  background: rgba(255, 255, 255, .75);
+}
+#ai:hover{
+  transform: scale(1.10);
+}
+
+#searchInput{
+  top: 140px;
+  left: 50%;
+  width: 50%;
+  padding: 5px;
+  border: 1px solid #444;
+  border-radius: 8px;
+  background: #111;
+  color: white;
+  align-self: center;
+  margin-bottom: 5px;
+  outline: none;
+}
+#searchInput:focus{
+  outline: none;
+  box-shadow: 0 0 8px rgba(138, 124, 255, .7);
 }
 
 .menu-btn {
   position: absolute;
   top: 15px;
   left: 15px;
-  background: #333;
-  border: 2px solid black;
+  background: rgba(255, 255, 255, .25);
+  border: 2px solid rgba(255, 255, 255, .5);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   border-radius: 6px;
   width: 35px;
   height: 30px;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
 }
 .menu-btn:active {
-  background: #242424;
+  background: rgba(255, 255, 255, .75);
+}
+.menu-btn:hover{
+  transform: scale(1.10);
 }
 .message {
   background-color: #292929;
@@ -156,11 +273,28 @@ p {
   margin-left: auto;
   background-color: #4a3f8f;
 }
+
+#messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+#messages::-webkit-scrollbar-track {
+  background: gray;
+  border-radius: 10px;
+}
+
+#messages::-webkit-scrollbar-thumb {
+  background: #000;
+  border-radius: 10px;
+}
+
 .chat {
   width: 400px;
   height: 600px;
-  background: #1b1b1b;
-  border: 1px solid #333;
+  background: rgba(255, 255, 255, .25);
+  border: 1px solid rgba(255, 255, 255, .5);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   border-radius: 15px;
   padding: 20px;
   display: flex;
@@ -172,20 +306,7 @@ p {
   initial-value: 0deg;
   inherits: false;
 }
-.chat::before {
-  border-radius: 18px;
-  content: "";
-  background: conic-gradient(from var(--angle), blue, lightblue, red, blue);
-  width: 100%;
-  height: 100%;
-  filter: blur(15px);
-  top: -1%;
-  left: -1%;
-  z-index: -1;
-  padding: 5px;
-  position: absolute;
-  animation: spin 8s infinite linear;
-}
+
 @keyframes spin {
   from {
     --angle: 0deg;
@@ -197,7 +318,7 @@ p {
 h1 {
   color: white;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 #messages {
   flex: 1;

@@ -18,6 +18,7 @@ client
   .catch((error) => console.error("Error connecting to MongoDB:", error));
 const db = client.db("Relay");
 const users = db.collection("users");
+const messages = db.collection("messages");
 app.use("/", express.static("login-page"));
 app.use("/app", express.static("public"));
 app.use('/ai', express.static('ai'));
@@ -51,7 +52,9 @@ app.post("/login", (req, res) => {
     }
   });
 });
-io.on("connection", (socket) => {
+io.on("connection", async (socket) => {
+  const oldMessages = await messages.find().toArray();
+  socket.emit("old messages", oldMessages);
   console.log("A user connected.");
   socket.emit("online users", usernames);
 
@@ -76,14 +79,22 @@ io.on("connection", (socket) => {
     io.emit("User Joined!", name);
   });
 
-  socket.on("chat message", (data) => {
-    console.log(data.username);
-    console.log(data.message);
-
+  socket.on("chat message", async (data) => {
     data.time = new Date().toLocaleTimeString();
+    const result = await messages.insertOne(data);
+    data._id = result.insertedId;
 
     io.emit("chat message", data);
   });
+
+socket.on("typing", (username) => {
+  socket.broadcast.emit("typing", username);
+});
+
+socket.on('message read', (messageId) => {
+  socket.broadcast.emit('message read', messageId);
+})
+
 });
 
 app.post("/register", (req, res) => {
